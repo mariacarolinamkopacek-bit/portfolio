@@ -25,7 +25,7 @@ const translations = {
     // Sobre
     about_heading:   "Sobre",
     about_bio:       "Engenheira Mecânica formada pela UFRGS, com forte interesse em projeto mecânico e automobilismo. Trabalhei com desenvolvimento de suspensão para veículos de competição Fórmula SAE, projetos na área de óleo e gás, segurança do trabalho e fabricação de instrumentos musicais. Sou apaixonada por resolver problemas das mais diversas naturezas — da análise de elementos finitos à luthieria.",
-    about_bio2:      "Atualmente na KLL SAF Holland Group, desenvolvendo geometrias de suspensão para caminhões e ônibus com SolidWorks e ANSYS Workbench. Além da engenharia, construo guitarras e baixos do zero, faço trabalhos em pirografia, desenhos realistas a lápis e projetos de marcenaria.",
+    about_bio2:      "Além da engenharia, construo guitarras e baixos do zero, faço trabalhos em pirografia, desenhos realistas a lápis e projetos de marcenaria.",
     about_available: "Disponível para projetos freelance",
 
     // Projetos
@@ -123,7 +123,7 @@ const translations = {
     // About
     about_heading:   "About",
     about_bio:       "Mechanical Engineer graduated from UFRGS with a strong interest in mechanical design and motorsport. I have worked on Formula SAE competition vehicle suspension, oil and gas product development, occupational safety, and musical instrument manufacturing. I'm passionate about solving problems across widely different fields — from finite element analysis to luthiery.",
-    about_bio2:      "Currently at KLL SAF Holland Group, developing suspension geometries for trucks and buses using SolidWorks and ANSYS Workbench. Beyond engineering, I build guitars and basses from raw wood, create pyrographic artwork, draw realistic pencil portraits, and design woodworking projects.",
+    about_bio2:      "Beyond engineering, I build guitars and basses from raw wood, create pyrographic artwork, draw realistic pencil portraits, and design woodworking projects.",
     about_available: "Available for freelance projects",
 
     // Projects
