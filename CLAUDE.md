@@ -55,6 +55,8 @@ Web-optimized assets only go into the repo. Raw originals (`.psd`, `.ai`, `.indd
 
 ## Commit Conventions
 
+**Commit and push after every meaningful unit of work** — do not batch multiple unrelated changes into one commit, and do not leave work uncommitted at the end of a session. The goal is that the GitHub repository always reflects the latest stable state so nothing is ever lost.
+
 All commits use this prefix scheme:
 
 | Prefix | Use for |
@@ -66,7 +68,7 @@ All commits use this prefix scheme:
 | `fix:` | Correcting something broken or wrong |
 | `polish:` | Alignment, spacing, typography refinements |
 
-Commits are in English. Push to `origin/master` after each meaningful work session.
+Commits are in English. Always run `git push` immediately after `git commit` — local-only commits defeat the purpose of the backup. If a session ends with uncommitted changes, commit them before stopping.
 
 ## Key Constraints
 
