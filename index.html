@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Maria Carolina Kopacek — Engenheira Mecânica</title>
+  <meta name="description" content="Portfolio de Maria Carolina Kopacek — Engenheira Mecânica, Inventora e Maker. Especialista em projeto mecânico, simulações estruturais, luthieria e dinâmica veicular." />
+
+  <!-- Open Graph: controls the preview card when the link is shared on WhatsApp, Instagram, etc. -->
+  <meta property="og:title"       content="Maria Carolina Kopacek — Engenheira Mecânica" />
+  <meta property="og:description" content="Engenheira Mecânica, Inventora e Maker. Da análise de elementos finitos à luthieria." />
+  <meta property="og:type"        content="website" />
+  <!-- og:image and og:url will be added in Phase B7 (publishing) -->
+
+  <!-- Google Fonts — loaded before CSS so text renders without flash -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+
+      <a href="#" class="nav-logo">MC<span>.</span>Kopacek</a>
+
+      <ul class="nav-links">
+        <li><a href="#sobre"       data-i18n="nav_about">Sobre</a></li>
+        <li><a href="#projetos"    data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
+        <li><a href="#conquistas"  data-i18n="nav_achievements">Conquistas</a></li>
+        <li><a href="#contato"     data-i18n="nav_contact">Contato</a></li>
+        <li>
+          <button class="lang-toggle" id="langToggle" aria-label="Switch to English">EN</button>
+        </li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile dropdown -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="#sobre"       data-i18n="nav_about">Sobre</a>
+    <a href="#projetos"    data-i18n="nav_projects">Projetos</a>
+    <a href="#habilidades" data-i18n="nav_skills">Habilidades</a>
+    <a href="#conquistas"  data-i18n="nav_achievements">Conquistas</a>
+    <a href="#contato"     data-i18n="nav_contact">Contato</a>
+    <button class="lang-toggle" id="langToggleMobile">EN</button>
+  </div>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section id="hero">
+    <div class="container hero-content">
+      <h1 class="hero-name" data-i18n="hero_name">Maria Carolina Kopacek</h1>
+      <span class="hero-name-underline"></span>
+      <p class="hero-title"    data-i18n="hero_title">Engenheira Mecânica</p>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Inventora &amp; Maker</p>
+      <a href="#projetos" class="hero-cta" data-i18n="hero_cta">Ver meu trabalho</a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SOBRE / ABOUT
+       ============================================================ -->
+  <section id="sobre">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+        <h2 data-i18n="about_heading">Sobre</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-photo-wrapper fade-up">
+          <!--
+            FASE B5: substituir o placeholder abaixo pela sua foto real:
+            <img src="assets/images/portrait.jpg" alt="Maria Carolina Kopacek" class="about-photo">
+          -->
+          <div class="about-photo-placeholder">
+            [ Foto de perfil ]<br><br>
+            Substituir em assets/images/portrait.jpg
+          </div>
+        </div>
+
+        <div class="about-bio fade-up">
+          <p data-i18n="about_bio">
+            Engenheira Mecânica formada pela UFRGS, com forte interesse em projeto mecânico e automobilismo.
+            Trabalhei com desenvolvimento de suspensão para veículos de competição Fórmula SAE,
+            projetos na área de óleo e gás, segurança do trabalho e fabricação de instrumentos musicais.
+            Sou apaixonada por resolver problemas das mais diversas naturezas — da análise de elementos finitos à luthieria.
+          </p>
+          <p data-i18n="about_bio2">
+            Atualmente na KLL SAF Holland Group, desenvolvendo geometrias de suspensão para caminhões e ônibus
+            com SolidWorks e ANSYS Workbench. Além da engenharia, construo guitarras e baixos do zero,
+            faço trabalhos em pirografia, desenhos realistas a lápis e projetos de marcenaria.
+          </p>
+          <span class="about-tag" data-i18n="about_available">Disponível para projetos freelance</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROJETOS / PROJECTS
+       ============================================================ -->
+  <section id="projetos">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+        <h2 data-i18n="projects_heading">Projetos</h2>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="filter-bar fade-up">
+        <button class="filter-btn active" data-filter="all"         data-i18n="filter_all">Todos</button>
+        <button class="filter-btn"        data-filter="engineering" data-i18n="filter_engineering">Engenharia</button>
+        <button class="filter-btn"        data-filter="maker"       data-i18n="filter_maker">Maker</button>
+        <button class="filter-btn"        data-filter="motorsport"  data-i18n="filter_motorsport">Motorsport</button>
+      </div>
+
+      <!-- Projects grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- PROJECT: Suspensão Fórmula SAE -->
+        <a href="projects/suspensao-formula-sae.html" class="project-card fade-up" data-category="engineering">
+          <!-- FASE B5: substituir por <img src="assets/images/sae-suspension.jpg" alt="..." class="project-card-image"> -->
+          <div class="project-card-placeholder">⚙</div>
+          <div class="project-card-body">
+            <p class="project-card-category" data-i18n="cat_engineering">Engenharia</p>
+            <h3 class="project-card-title"   data-i18n="proj_sae_title">Suspensão Fórmula SAE — RS Racing UFRGS</h3>
+            <p class="project-card-desc"     data-i18n="proj_sae_desc">Desenvolvimento completo de geometria de suspensão, usinagem de manga em alumínio 7075-T6 e liderança da equipe. 7º lugar nacional em 2023.</p>
+            <span class="project-card-link"  data-i18n="card_read_more">Ver projeto →</span>
+          </div>
+        </a>
+
+        <!-- PROJECT: Simulações KLL SAF Holland -->
+        <a href="projects/simulacoes-kll.html" class="project-card fade-up" data-category="engineering">
+          <div class="project-card-placeholder">📐</div>
+          <div class="project-card-body">
+            <p class="project-card-category" data-i18n="cat_engineering">Engenharia</p>
+            <h3 class="project-card-title"   data-i18n="proj_kll_title">Simulações de Veículo Completo — KLL SAF Holland</h3>
+            <p class="project-card-desc"     data-i18n="proj_kll_desc">Geometrias de suspensão para caminhões e ônibus. Análise de elementos finitos e fadiga com documentação Fraunhofer-Gesellschaft.</p>
+            <span class="project-card-link"  data-i18n="card_read_more">Ver projeto →</span>
+          </div>
+        </a>
+
+        <!-- PROJECT: End Fittings Simeros -->
+        <a href="projects/oleo-gas-simeros.html" class="project-card fade-up" data-category="engineering">
+          <div class="project-card-placeholder">🔩</div>
+          <div class="project-card-body">
+            <p class="project-card-category" data-i18n="cat_engineering">Engenharia</p>
+            <h3 class="project-card-title"   data-i18n="proj_simeros_title">End Fittings para Dutos Submarinos — Simeros</h3>
+            <p class="project-card-desc"     data-i18n="proj_simeros_desc">Projeto completo e dimensionamento de conectores para dutos submarinos. Análise numérica com Abaqus CAE.</p>
+            <span class="project-card-link"  data-i18n="card_read_more">Ver projeto →</span>
+          </div>
+        </a>
+
+        <!-- PROJECT: Luthieria -->
+        <a href="projects/luthieria.html" class="project-card fade-up" data-category="maker">
+          <div class="project-card-placeholder">🎸</div>
+          <div class="project-card-body">
+            <p class="project-card-category" data-i18n="cat_maker">Maker</p>
+            <h3 class="project-card-title"   data-i18n="proj_luthieria_title">Luthieria — Guitarras e Baixos Customizados</h3>
+            <p class="project-card-desc"     data-i18n="proj_luthieria_desc">Construção de instrumentos elétricos a partir de madeira bruta. Customizações com pirografia e técnica japonesa shou sugi ban.</p>
+            <span class="project-card-link"  data-i18n="card_read_more">Ver projeto →</span>
+          </div>
+        </a>
+
+        <!-- PROJECT: Arte Manual -->
+        <a href="projects/arte-manual.html" class="project-card fade-up" data-category="maker">
+          <div class="project-card-placeholder">✏</div>
+          <div class="project-card-body">
+            <p class="project-card-category" data-i18n="cat_maker">Maker</p>
+            <h3 class="project-card-title"   data-i18n="proj_arte_title">Arte Manual — Pirografia e Retratos a Lápis</h3>
+            <p class="project-card-desc"     data-i18n="proj_arte_desc">Retratos realistas a lápis e pirografia sobre madeira, incluindo a técnica shou sugi ban.</p>
+            <span class="project-card-link"  data-i18n="card_read_more">Ver projeto →</span>
+          </div>
+        </a>
+
+        <!-- PROJECT: RS Racing -->
+        <a href="projects/rs-racing.html" class="project-card fade-up" data-category="motorsport">
+          <div class="project-card-placeholder">🏎</div>
+          <div class="project-card-body">
+            <p class="project-card-category" data-i18n="cat_motorsport">Motorsport</p>
+            <h3 class="project-card-title"   data-i18n="proj_rsracing_title">RS Racing UFRGS — Fórmula SAE</h3>
+            <p class="project-card-desc"     data-i18n="proj_rsracing_desc">5 anos na equipe: liderança de suspensão, projeto de peças usinadas, aquisição de dados e competições nacionais.</p>
+            <span class="project-card-link"  data-i18n="card_read_more">Ver projeto →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       HABILIDADES / SKILLS
+       ============================================================ -->
+  <section id="habilidades">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+        <h2 data-i18n="skills_heading">Habilidades</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Software -->
+        <div class="skills-group fade-up">
+          <h3 data-i18n="skills_software">Software</h3>
+          <div class="skill-item">
+            <span>SolidWorks</span>
+            <div class="skill-dots">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div>
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>ANSYS Workbench</span>
+            <div class="skill-dots">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div>
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Abaqus CAE</span>
+            <div class="skill-dots">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div>
+              <div class="skill-dot on"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>AutoCAD</span>
+            <div class="skill-dots">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div>
+              <div class="skill-dot on"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>SketchUp</span>
+            <div class="skill-dots">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div>
+              <div class="skill-dot on"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>MATLAB / Ansys APDL</span>
+            <div class="skill-dots">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div>
+              <div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Lotus Shark / Optimum Lap</span>
+            <div class="skill-dots">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div>
+              <div class="skill-dot"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical -->
+        <div class="skills-group fade-up">
+          <h3 data-i18n="skills_technical">Técnico</h3>
+          <div class="skill-item"><span data-i18n="skill_suspension">Geometria de Suspensão</span></div>
+          <div class="skill-item"><span data-i18n="skill_fea">Análise de Elementos Finitos</span></div>
+          <div class="skill-item"><span data-i18n="skill_fatigue">Análise de Fadiga</span></div>
+          <div class="skill-item"><span data-i18n="skill_dynamics">Dinâmica Veicular</span></div>
+          <div class="skill-item"><span data-i18n="skill_manufacturing">Desenhos de Fabricação</span></div>
+          <div class="skill-item"><span data-i18n="skill_data">Aquisição de Dados</span></div>
+          <div class="skill-item"><span data-i18n="skill_luthiery">Luthieria</span></div>
+          <div class="skill-item"><span data-i18n="skill_pyrography">Pirografia</span></div>
+          <div class="skill-item"><span data-i18n="skill_woodwork">Marcenaria</span></div>
+        </div>
+
+        <!-- Languages -->
+        <div class="skills-group fade-up">
+          <h3 data-i18n="skills_languages">Idiomas</h3>
+          <div class="skill-item">
+            <span data-i18n="lang_pt">Português</span>
+            <span class="skill-level-label highlight" data-i18n="lang_native">Nativo</span>
+          </div>
+          <div class="skill-item">
+            <span data-i18n="lang_en">Inglês</span>
+            <span class="skill-level-label highlight" data-i18n="lang_advanced">Avançado</span>
+          </div>
+          <div class="skill-item">
+            <span data-i18n="lang_de">Alemão</span>
+            <span class="skill-level-label" data-i18n="lang_pre_intermediate">Pré-Intermediário</span>
+          </div>
+          <div class="skill-item">
+            <span data-i18n="lang_cs">Tcheco</span>
+            <span class="skill-level-label" data-i18n="lang_beginner">Iniciante</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONQUISTAS / ACHIEVEMENTS
+       ============================================================ -->
+  <section id="conquistas">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+        <h2 data-i18n="achievements_heading">Conquistas</h2>
+      </div>
+
+      <div class="achievements-grid">
+
+        <div class="achievement-card fade-up">
+          <p class="achievement-year">2023</p>
+          <h3 class="achievement-title" data-i18n="ach_sae_title">7º Lugar Nacional — Fórmula SAE Brasil</h3>
+          <p class="achievement-desc"   data-i18n="ach_sae_desc">Equipe RS Racing UFRGS. Pilota de Skidpad em 2022.</p>
+        </div>
+
+        <div class="achievement-card fade-up">
+          <p class="achievement-year">2023</p>
+          <h3 class="achievement-title" data-i18n="ach_fia_title">FIA Girls on Track — Engenheiras e Mecânicas</h3>
+          <p class="achievement-desc"   data-i18n="ach_fia_desc">Programa da FIA no Autódromo de Tarumã, com a Copa Truck.</p>
+        </div>
+
+        <div class="achievement-card fade-up">
+          <p class="achievement-year">2022</p>
+          <h3 class="achievement-title" data-i18n="ach_segers_title">Curso Motorsport Performance Engineering</h3>
+          <p class="achievement-desc"   data-i18n="ach_segers_desc">Ministrado por Jorge Segers, com visita aos boxes da Porsche Cup em Interlagos.</p>
+        </div>
+
+        <div class="achievement-card fade-up">
+          <p class="achievement-year">2019–2020</p>
+          <h3 class="achievement-title" data-i18n="ach_teatro_title">Guitarrista e Vocalista — Teatro Bruno Kiefer</h3>
+          <p class="achievement-desc"   data-i18n="ach_teatro_desc">Grupo Peccátu, em cartaz por mais de um mês na Casa de Cultura Mário Quintana.</p>
+        </div>
+
+        <div class="achievement-card fade-up">
+          <p class="achievement-year">2015</p>
+          <h3 class="achievement-title" data-i18n="ach_militar_title">Sub-Tenente e Chefe de Percussão</h3>
+          <p class="achievement-desc"   data-i18n="ach_militar_desc">Banda do Colégio Militar de Porto Alegre.</p>
+        </div>
+
+        <div class="achievement-card fade-up">
+          <p class="achievement-year">Visitas</p>
+          <h3 class="achievement-title" data-i18n="ach_factories_title">Visitas Técnicas Internacionais</h3>
+          <p class="achievement-desc"   data-i18n="ach_factories_desc">Lamborghini (Itália), BMW (Alemanha), Scania (Brasil) e Canton Fair (China).</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTATO / CONTACT
+       ============================================================ -->
+  <section id="contato">
+    <div class="container">
+
+      <div class="section-heading fade-up">
+        <h2 data-i18n="contact_heading">Contato</h2>
+      </div>
+
+      <p class="contact-sub fade-up" data-i18n="contact_sub">
+        Tem um projeto em mente? Vamos conversar.
+      </p>
+
+      <div class="contact-buttons fade-up">
+        <a href="mailto:mariacarolinamkopacek@gmail.com" class="btn-primary" data-i18n="contact_email_btn">
+          Enviar e-mail
+        </a>
+        <a href="https://wa.me/5551981188325" class="btn-outline" target="_blank" rel="noopener noreferrer" data-i18n="contact_whatsapp_btn">
+          WhatsApp
+        </a>
+      </div>
+
+      <p class="contact-availability fade-up" data-i18n="contact_availability">
+        Disponível para projetos freelance e parcerias técnicas
+      </p>
+
+      <div class="contact-socials fade-up">
+        <a href="https://instagram.com/mariacarolinakopacek" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://linkedin.com/in/maria-carolina-minusso-kopacek" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="container">
+      <p class="footer-text" data-i18n="footer_credit">Projetado e desenvolvido por Maria Carolina Kopacek</p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts loaded at the end so HTML is ready before JS runs -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
