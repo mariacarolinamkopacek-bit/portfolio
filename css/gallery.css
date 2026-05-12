@@ -1,0 +1,147 @@
+/* ==========================================
+   gallery.css — Project gallery pages
+   ========================================== */
+
+/* Nav on gallery pages is always solid */
+.nav { background: rgba(26,26,26,0.97); backdrop-filter: blur(8px); }
+
+.gallery-back {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color var(--t-fast);
+  white-space: nowrap;
+}
+.gallery-back:hover { color: var(--accent-hover); }
+
+/* ==========================================
+   Slideshow
+   ========================================== */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0F0F0F;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide.active { opacity: 1; }
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Arrows */
+.slide-prev,
+.slide-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26,26,26,0.75);
+  color: var(--text-primary);
+  border: 1px solid rgba(200,121,65,0.4);
+  border-radius: var(--radius-sm);
+  font-size: 1.25rem;
+  transition: background var(--t-fast), border-color var(--t-fast);
+  cursor: pointer;
+}
+.slide-prev:hover,
+.slide-next:hover {
+  background: rgba(200,121,65,0.25);
+  border-color: var(--accent);
+}
+.slide-prev { left: var(--space-md); }
+.slide-next { right: var(--space-md); }
+
+/* Hide arrows + dots when only 1 image */
+.slideshow.single .slide-prev,
+.slideshow.single .slide-next,
+.slideshow.single .slide-dots,
+.slideshow.single .slide-hint { display: none; }
+
+/* Dot indicators */
+.slide-dots {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(239,239,239,0.3);
+  border: none;
+  cursor: pointer;
+  transition: background var(--t-fast), transform var(--t-fast);
+}
+.dot.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+/* Counter */
+.slide-counter {
+  position: absolute;
+  top: calc(var(--nav-height) + var(--space-sm));
+  right: var(--space-md);
+  color: rgba(239,239,239,0.4);
+  font-size: 0.78rem;
+  font-family: var(--font-body);
+  z-index: 10;
+  letter-spacing: 0.05em;
+}
+
+/* Keyboard hint */
+.slide-hint {
+  position: absolute;
+  bottom: calc(var(--space-lg) + 28px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(239,239,239,0.25);
+  font-size: 0.72rem;
+  font-family: var(--font-body);
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ==========================================
+   Project info panel
+   ========================================== */
+.gallery-info {
+  padding: var(--space-xl) 0 var(--space-2xl);
+  border-top: 2px solid var(--accent);
+}
+
+.gallery-info h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  margin-bottom: var(--space-md);
+}
+
+.gallery-desc {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 680px;
+  color: var(--text-muted);
+}

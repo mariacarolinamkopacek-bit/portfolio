@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luthieria — MC Kopacek</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/gallery.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">MC<span>.</span>Kopacek</a>
+      <div style="display:flex;align-items:center;gap:var(--space-md)">
+        <a href="../index.html#projetos" class="gallery-back" data-i18n="gallery_back">← Projetos</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="slideshow">
+
+    <div class="slide active">
+      <img src="../assets/images/projects/luthieria.jpg" alt="Corpo de Stratocaster — shou sugi ban">
+    </div>
+    <div class="slide">
+      <img src="../assets/images/projects/luthieria-tele.jpg" alt="Telecaster finalizada em nogueira">
+    </div>
+    <div class="slide">
+      <img src="../assets/images/projects/luthieria-pyro.jpg" alt="Pirografia de veado em corpo de Telecaster">
+    </div>
+
+    <button class="slide-prev" aria-label="Anterior">&#8592;</button>
+    <button class="slide-next" aria-label="Próximo">&#8594;</button>
+
+    <div class="slide-dots">
+      <button class="dot active"></button>
+      <button class="dot"></button>
+      <button class="dot"></button>
+    </div>
+
+    <span class="slide-counter">1 / 3</span>
+    <span class="slide-hint" data-i18n="gallery_hint">← → para navegar</span>
+  </div>
+
+  <section class="gallery-info">
+    <div class="container">
+      <h1 data-i18n="proj_luthieria_title">Luthieria — Guitarras e Baixos Customizados</h1>
+      <p class="gallery-desc" data-i18n="proj_luthieria_desc">Construção de instrumentos elétricos a partir de madeira bruta. Customizações com pirografia e técnica japonesa shou sugi ban.</p>
+    </div>
+  </section>
+
+  <script src="../js/translations.js"></script>
+  <script src="../js/gallery.js"></script>
+</body>
+</html>

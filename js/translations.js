@@ -41,9 +41,9 @@ const translations = {
 
     proj_sae_title:       "Suspensão Fórmula SAE — RS Racing UFRGS",
     proj_sae_desc:        "Desenvolvimento completo de geometria de suspensão, usinagem de manga em alumínio 7075-T6 e liderança da equipe. 7º lugar nacional em 2023.",
-    proj_kll_title:       "Simulações de Veículo Completo — KLL SAF Holland",
-    proj_kll_desc:        "Geometrias de suspensão para caminhões e ônibus. Análise de elementos finitos e fadiga com documentação Fraunhofer-Gesellschaft.",
-    proj_simeros_title:   "End Fittings para Dutos Submarinos — Simeros",
+    proj_kll_title:       "Simulações de Suspensão e Dinâmica Veicular",
+    proj_kll_desc:        "Geometrias de suspensão para veículos comerciais. Análise de elementos finitos e fadiga.",
+    proj_simeros_title:   "End Fittings para Dutos Submarinos",
     proj_simeros_desc:    "Projeto completo e dimensionamento de conectores para dutos submarinos. Análise numérica com Abaqus CAE.",
     proj_luthieria_title: "Luthieria — Guitarras e Baixos Customizados",
     proj_luthieria_desc:  "Construção de instrumentos elétricos a partir de madeira bruta. Customizações com pirografia e técnica japonesa shou sugi ban.",
@@ -100,6 +100,10 @@ const translations = {
     contact_whatsapp_btn: "WhatsApp",
     contact_availability: "Disponível para projetos freelance e parcerias técnicas",
 
+    // Gallery pages
+    gallery_back: "← Projetos",
+    gallery_hint: "← → para navegar",
+
     // Footer
     footer_credit: "Projetado e desenvolvido por Maria Carolina Kopacek",
   },
@@ -139,9 +143,9 @@ const translations = {
 
     proj_sae_title:       "Formula SAE Suspension — RS Racing UFRGS",
     proj_sae_desc:        "Full suspension geometry development, machined aluminum 7075-T6 knuckles, and team leadership. 7th place nationally in 2023.",
-    proj_kll_title:       "Full Vehicle Simulations — KLL SAF Holland",
-    proj_kll_desc:        "Suspension geometry for trucks and buses. Finite element and fatigue analysis using Fraunhofer-Gesellschaft documentation.",
-    proj_simeros_title:   "Subsea Pipeline End Fittings — Simeros",
+    proj_kll_title:       "Suspension & Vehicle Dynamics Simulations",
+    proj_kll_desc:        "Suspension geometry for commercial vehicles. Finite element and fatigue analysis.",
+    proj_simeros_title:   "Subsea Pipeline End Fittings",
     proj_simeros_desc:    "Full design and dimensioning of connectors for subsea pipelines. Numerical analysis with Abaqus CAE.",
     proj_luthieria_title: "Luthiery — Custom Guitars and Basses",
     proj_luthieria_desc:  "Complete manufacture of electric instruments from raw wood. Customization with pyrographic designs and Japanese shou sugi ban technique.",
@@ -197,6 +201,10 @@ const translations = {
     contact_email_btn:    "Send email",
     contact_whatsapp_btn: "WhatsApp",
     contact_availability: "Available for freelance projects and technical partnerships",
+
+    // Gallery pages
+    gallery_back: "← Projects",
+    gallery_hint: "← → to navigate",
 
     // Footer
     footer_credit: "Designed and built by Maria Carolina Kopacek",
