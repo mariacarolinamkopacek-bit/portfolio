@@ -237,12 +237,9 @@ section { padding: var(--space-xl) 0; }
   position: relative;
   overflow: hidden;
 
-  /* Placeholder background — replace with photo/video later */
-  background: linear-gradient(
-    135deg,
-    rgba(26,26,26,0.98) 0%,
-    rgba(26,26,26,0.90) 100%
-  );
+  background:
+    linear-gradient(rgba(15,15,15,0.72) 0%, rgba(15,15,15,0.62) 100%),
+    url('../assets/images/hero.jpg') center center / cover no-repeat;
 }
 
 /* Subtle blueprint-dot grid overlay */
