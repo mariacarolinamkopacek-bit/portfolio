@@ -13,13 +13,13 @@ A full project plan (phases, content categories, reference portfolio analysis, t
 
 ## Build Approach
 
-Two parallel plans exist. The chosen path will be recorded here once decided:
+**Plan B — HTML + CSS + Vanilla JS.** Static site, no framework, no build step, no compilation.
 
-**Plan A — No-Code (Framer):** Visual drag-and-drop builder. Monthly cost ~$10-25 USD. No local build commands.
+**Local preview:** Open `index.html` with the VS Code **Live Server** extension (right-click → "Open with Live Server"). This serves the site at `http://127.0.0.1:5500` and auto-reloads on every file save.
 
-**Plan B — HTML + CSS + Vanilla JS:** Static site, no framework, no build step. Hosted free on GitHub Pages. This is the recommended path.
+**Deploy:** `git push` to `origin/master`. GitHub Pages serves the site automatically from the root of the `master` branch. No build command needed — what's in the repo is what's live.
 
-> Update this section when the plan is confirmed. Once Plan B is active, add: how to preview locally (e.g., VS Code Live Server extension or `npx serve .`), and the GitHub Pages deployment URL.
+**Live URL:** coming soon (GitHub Pages will be enabled during Phase B7)
 
 ## Bilingual System (Plan B)
 
