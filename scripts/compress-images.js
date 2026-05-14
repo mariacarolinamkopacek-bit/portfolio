@@ -1,47 +1,58 @@
-// One-time image compression script — run with: node scripts/compress-images.js
 const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs');
 
-const imgDir = path.join(__dirname, '..', 'assets', 'images');
+const BASE = 'C:\\Users\\Carol\\Downloads\\backup portfolio';
+const DEST = 'C:\\Users\\Carol\\Projects\\portfolio\\assets\\images\\projects';
 
-// Settings: hero gets more width, cards get 900px
-const rules = [
-  { file: 'hero.jpg',                       width: 1600, quality: 82 },
-  { file: 'about-portrait.jpg',             width: 900,  quality: 82 },
-  { file: 'projects/sae-suspension.jpg',    width: 900,  quality: 80 },
-  { file: 'projects/sae-cockpit.jpg',       width: 900,  quality: 80 },
-  { file: 'projects/kll-simulations.jpg',   width: 900,  quality: 80 },
-  { file: 'projects/simeros.jpg',           width: 900,  quality: 80 },
-  { file: 'projects/luthieria.jpg',         width: 900,  quality: 82 },
-  { file: 'projects/luthieria-tele.jpg',    width: 900,  quality: 82 },
-  { file: 'projects/luthieria-pyro.jpg',    width: 900,  quality: 82 },
-  { file: 'projects/arte-astronaut.jpg',    width: 900,  quality: 82 },
-  { file: 'projects/arte-portrait.jpg',     width: 900,  quality: 82 },
-  { file: 'projects/arte-r2d2.jpg',         width: 900,  quality: 82 },
-  { file: 'projects/rs-racing-cockpit.jpg', width: 900,  quality: 80 },
-  { file: 'projects/rs-racing-team.jpg',    width: 900,  quality: 80 },
-  { file: 'projects/rs-racing-car.jpg',     width: 900,  quality: 80 },
-];
+function getFiles(folder) {
+  return fs.readdirSync(folder)
+    .filter(f => /\.(jpg|jpeg|png)$/i.test(f))
+    .sort((a, b) => {
+      const na = parseInt(path.basename(a, path.extname(a)));
+      const nb = parseInt(path.basename(b, path.extname(b)));
+      return na - nb;
+    });
+}
 
-async function compress() {
-  for (const { file, width, quality } of rules) {
-    const fullPath = path.join(imgDir, file);
-    const tmpPath  = fullPath + '.tmp';
+async function processImage(src, destPath, maxDim, quality) {
+  if (maxDim === undefined) maxDim = 1400;
+  if (quality === undefined) quality = 82;
+  await sharp(src)
+    .rotate()
+    .resize({ width: maxDim, height: maxDim, fit: 'inside', withoutEnlargement: true })
+    .jpeg({ quality: quality, mozjpeg: true })
+    .toFile(destPath);
+  var kb = (fs.statSync(destPath).size / 1024).toFixed(0);
+  console.log('  ' + path.basename(destPath) + ' -- ' + kb + ' KB');
+}
 
-    const before = fs.statSync(fullPath).size;
-    await sharp(fullPath)
-      .rotate()              // auto-rotate from EXIF
-      .resize({ width, withoutEnlargement: true })
-      .jpeg({ quality, mozjpeg: true })
-      .toFile(tmpPath);
+async function main() {
+  var categories = [
+    { folder: '1 - Product Cases',                     prefix: 'pc',       cover: true },
+    { folder: '2 - Modeling and Structural Simulation', prefix: 'mod',      cover: true },
+    { folder: '3 - Motorsport',                        prefix: 'moto',     cover: false },
+    { folder: '4 - Luthiery',                          prefix: 'luth',     cover: false },
+    { folder: '5 - Drawing',                           prefix: 'draw',     cover: false },
+    { folder: '6 - Explorer',                          prefix: 'explorer', cover: true },
+  ];
 
-    fs.renameSync(tmpPath, fullPath);
-    const after = fs.statSync(fullPath).size;
-    const pct = Math.round((1 - after / before) * 100);
-    console.log(`${file.padEnd(38)} ${Math.round(before/1024)}KB → ${Math.round(after/1024)}KB  (-${pct}%)`);
+  for (var c = 0; c < categories.length; c++) {
+    var cat = categories[c];
+    var folder = path.join(BASE, cat.folder);
+    var files = getFiles(folder);
+    console.log('\n' + cat.folder + ' (' + files.length + ' files)');
+
+    if (cat.cover) {
+      await processImage(path.join(folder, files[0]), path.join(DEST, cat.prefix + '-cover.jpg'), 1000);
+    }
+
+    for (var i = 0; i < files.length; i++) {
+      await processImage(path.join(folder, files[i]), path.join(DEST, cat.prefix + '-' + (i + 1) + '.jpg'));
+    }
   }
+
   console.log('\nDone.');
 }
 
-compress().catch(console.error);
+main().catch(function(err) { console.error(err); process.exit(1); });
