@@ -89,6 +89,7 @@ p { color: var(--text-muted); }
 }
 
 section { padding: var(--space-xl) 0; }
+section[id] { scroll-margin-top: var(--nav-height); }
 
 /* Section heading with copper underline rule */
 .section-heading       { margin-bottom: var(--space-lg); }
@@ -655,7 +656,8 @@ section { padding: var(--space-xl) 0; }
 .contact-socials {
   display: flex;
   justify-content: center;
-  gap: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-lg);
 }
 .contact-socials a {
   font-size: 0.875rem;
@@ -688,6 +690,14 @@ footer {
   transition: opacity var(--t-slow), transform var(--t-slow);
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* Stagger project cards so they cascade in rather than all at once */
+.projects-grid .project-card:nth-child(1) { transition-delay:   0ms; }
+.projects-grid .project-card:nth-child(2) { transition-delay:  70ms; }
+.projects-grid .project-card:nth-child(3) { transition-delay: 140ms; }
+.projects-grid .project-card:nth-child(4) { transition-delay:  70ms; }
+.projects-grid .project-card:nth-child(5) { transition-delay: 140ms; }
+.projects-grid .project-card:nth-child(6) { transition-delay: 210ms; }
 
 /* ==========================================
    Responsive — Tablet (≤ 1024px)

@@ -83,7 +83,10 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
+  max-width: 90%;
   z-index: 10;
 }
 .dot {
@@ -132,6 +135,12 @@
 .gallery-info {
   padding: var(--space-xl) 0 var(--space-2xl);
   border-top: 2px solid var(--accent);
+}
+
+@media (max-width: 640px) {
+  .slideshow { height: 60vh; }
+  .gallery-info { padding: var(--space-lg) 0 var(--space-xl); }
+  .gallery-info h1 { font-size: clamp(1.35rem, 5vw, 1.8rem); }
 }
 
 .gallery-info h1 {

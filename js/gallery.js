@@ -35,6 +35,14 @@ const counter   = document.querySelector('.slide-counter');
 
 if (slides.length <= 1) slideshow.classList.add('single');
 
+// Lazy-load images beyond the first slide
+slides.forEach((slide, i) => {
+  if (i > 0) {
+    const img = slide.querySelector('img');
+    if (img) img.loading = 'lazy';
+  }
+});
+
 let current = 0;
 
 function updateCounter() {
@@ -59,10 +67,10 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') goTo(current + 1);
 });
 
-// Touch / swipe
+// Touch / swipe — scoped to slideshow so scrolling the info panel below doesn't trigger slide changes
 let touchX = 0;
-document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
-document.addEventListener('touchend',   e => {
+slideshow.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+slideshow.addEventListener('touchend',   e => {
   const dx = e.changedTouches[0].clientX - touchX;
   if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
 }, { passive: true });
